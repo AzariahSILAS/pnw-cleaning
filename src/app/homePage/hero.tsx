@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -58,7 +59,7 @@ const Hero = () => {
 
             {/* Image */}
             <div>
-              <img
+              <Image
                 className="w-full"
                 src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/2/hero-img.png"
                 alt="Hero illustration"
