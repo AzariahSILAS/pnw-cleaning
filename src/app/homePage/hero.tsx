@@ -63,6 +63,7 @@ const Hero = () => {
                 className="w-full"
                 src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/2/hero-img.png"
                 alt="Hero illustration"
+                width={500} height={300}
               />
             </div>
           </div>
