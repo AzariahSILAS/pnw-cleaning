@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-b from-green-50 to-green-100">
+    <div className="bg-gradient-to-b from-yellow-600 to-green-100">
       {/* Hero Section */}
       <section className="py-10 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -10,19 +10,12 @@ const Hero = () => {
             {/* Text Content */}
             <div>
               <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
-                Collaborate remotely, with{" "}
-                <span className="relative inline-flex">
-                  <span className="absolute inset-x-0 bottom-0 border-b-[30px] border-[#4ADE80]" />
-                  <span className="relative text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
-                    Postcrafts.
-                  </span>
-                </span>
+              PNW Cleaning
+                
               </h1>
 
               <p className="mt-8 text-base text-black sm:text-xl">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat.
+              We clean your work space with the quality and precision expected in a home. 
               </p>
 
               <div className="mt-10 sm:flex sm:items-center sm:space-x-8">
