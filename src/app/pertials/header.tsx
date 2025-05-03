@@ -9,7 +9,6 @@ const Header = () => {
   return (
     
     <header className="pb-6 bg-[#2B2A2A] lg:pb-0">
-      <link rel="icon" href="LogoDark.png" sizes="any" />
 
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Desktop/Nav */}
