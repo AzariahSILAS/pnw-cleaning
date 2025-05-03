@@ -1,4 +1,6 @@
 'use client'
+import Image from 'next/image';
+
 import React, { useState } from 'react';
 
 const Header = () => {
@@ -14,7 +16,7 @@ const Header = () => {
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">
             <a href="#" title="" className="flex">
-            <img src="logoLight.png" alt="PWN Cleaning Logo" width="60" height="60" />
+            <Image src="/logoLight.png" alt="PWN Cleaning Logo" width={60} height={60} />
             </a>
           </div>
 
