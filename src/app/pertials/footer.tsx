@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
             <img
               className="w-auto h-9"
-              src="logoLight.png"
+              src="LogoLight.png"
               alt="Logo"
             />
             <p className="text-base leading-relaxed text-white mt-7">
