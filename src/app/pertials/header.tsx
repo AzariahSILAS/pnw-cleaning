@@ -15,7 +15,7 @@ const Header = () => {
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">
             <a href="#" title="" className="flex">
-            <Image src="/wait.gif" alt="PWN Cleaning Logo" width={60} height={60} />
+            <Image src="/logoLight.png" alt="PWN Cleaning Logo" width={60} height={60} />
             </a>
           </div>
 
