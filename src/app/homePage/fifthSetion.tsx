@@ -2,7 +2,7 @@ import Image from "next/image";
 function FifthSection() {
     return (
     <div className="max-w-4xl  px-10 lg:px-0 py-12  mx-auto ">
-        <h2 className="text-2xl font-semibold text-center mb-10">Value we offer</h2>
+        <h2 id="services" className="text-2xl font-semibold text-center mb-10">Value we offer</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2  gap-[20]">
 
             <div className=" bg-[#D9D9D9]  ">

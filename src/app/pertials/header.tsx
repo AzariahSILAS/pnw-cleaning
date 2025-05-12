@@ -1,21 +1,24 @@
-'use client'
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    
     <header className=" p-1 bg-[#2B2A2A] lg:p-0">
-
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Desktop/Nav */}
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">
             <a href="#" title="" className="flex">
-            <Image src="/LogoLight.png" alt="PWN Cleaning Logo" width={60} height={60} />
+              <Image
+                src="/LogoLight.png"
+                alt="PWN Cleaning Logo"
+                width={60}
+                height={60}
+              />
             </a>
           </div>
 
@@ -60,13 +63,18 @@ const Header = () => {
 
           {/* Desktop Links */}
           <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-            {['Home', 'Services', 'Contact','About' ].map((item) => (
+            {[
+              { name: "Home", id: "home" },
+              { name: "Services", id: "services" },
+              { name: "Contact", id: "contact" },
+              { name: "About", id: "about" },
+            ].map((item) => (
               <a
-                key={item}
-                href="#"
+                key={item.name}
+                href={`#${item.id}`} // This makes it a hash link to an ID on the page
                 className="text-base font-medium text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                {item}
+                {item.name}
               </a>
             ))}
           </div>
@@ -86,13 +94,18 @@ const Header = () => {
           <nav className="pt-4 pb-6 mt-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
             <div className="flow-root">
               <div className="flex flex-col px-6 -my-2 space-y-1">
-                {['Home', 'Services', 'Contact','About' ].map((item) => (
+                {[
+                  { name: "Home", id: "home" },
+                  { name: "Services", id: "services" },
+                  { name: "Contact", id: "contact" },
+                  { name: "About", id: "about" },
+                ].map((item) => (
                   <a
-                    key={item}
-                    href="#"
+                    key={item.name}
+                    href={`#${item.id}`} // This makes it a hash link to an ID on the page
                     className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 ))}
               </div>

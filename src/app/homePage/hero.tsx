@@ -26,13 +26,14 @@ const Hero = () => {
 
   const backgroundImage =
     width >= 983
-      ? "url('headerimg-small.jpg')" // For large screens
+      ? "url('headerImg-small.jpg')" // For large screens
       : "url('headerImgMobile.jpg')"; // For smaller screens
 
   return (
     <section
   className="w-full min-h-[504px] bg-cover bg-center flex items-center   " 
   style={{ backgroundImage }}
+  id="home"
 >
   <div className="px-4 mx-auto w-7xl sm:px-6 lg:px-8 flex lg:justify-start sm:justify-center ">
     <div className="bg-[rgba(0,0,0,0.72)] p-8 rounded-xl text-left text-white ">
