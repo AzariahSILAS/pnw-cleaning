@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     
-    <header className="pb-6 bg-[#2B2A2A] lg:pb-0">
+    <header className=" p-1 bg-[#2B2A2A] lg:p-0">
 
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Desktop/Nav */}
