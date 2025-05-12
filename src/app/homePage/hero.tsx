@@ -26,7 +26,7 @@ const Hero = () => {
 
   const backgroundImage =
     width >= 983
-      ? "url('headerimg-small.jpg')" // For large screens
+      ? "url('headerImg-small.jpg')" // For large screens
       : "url('headerImgMobile.jpg')"; // For smaller screens
 
   return (
