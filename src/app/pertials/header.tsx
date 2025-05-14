@@ -71,7 +71,7 @@ const Header = () => {
             ].map((item) => (
               <a
                 key={item.name}
-                href={item.anker === true ? `/#${item.id}` : `/${item.id}`  } // This makes it a hash link to an ID on the page
+                href={item.anker === true ? `/#${item.id}` : `/${item.id}`} // This makes it a hash link to an ID on the page
                 className="text-[18px] font-medium text-white transition-all duration-200 m-[15px] border border-transparent px-[6px]  hover:border-white focus:text-blue-600"
               >
                 {item.name}
@@ -95,14 +95,14 @@ const Header = () => {
             <div className="flow-root">
               <div className="flex flex-col px-6 -my-2 space-y-1">
                 {[
-                  { name: "Home", id: "home" },
-                  { name: "Services", id: "services" },
-                  { name: "Contact", id: "contact" },
-                  { name: "About", id: "about" },
+                  { name: "Home", id: " ", anker: false },
+                  { name: "Services", id: "services", anker: true },
+                  { name: "Contact", id: "contact", anker: false },
+                  { name: "About", id: "about", anker: false },
                 ].map((item) => (
                   <a
                     key={item.name}
-                    href={`#${item.id}`} // This makes it a hash link to an ID on the page
+                    href={item.anker === true ? `/#${item.id}` : `/${item.id}`} // This makes it a hash link to an ID on the page
                     className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
                   >
                     {item.name}
