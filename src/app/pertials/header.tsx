@@ -7,7 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className=" p-1 bg-[#2B2A2A] lg:p-0">
+    <header className=" p-1 bg-[#2B2A2A] lg:py-[5]  ">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Desktop/Nav */}
         <nav className="flex items-center justify-between h-16 lg:h-20">
@@ -64,15 +64,15 @@ const Header = () => {
           {/* Desktop Links */}
           <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
             {[
-              { name: "Home", id: "home" },
-              { name: "Services", id: "services" },
-              { name: "Contact", id: "contact" },
-              { name: "About", id: "about" },
+              { name: "Home", id: " ", anker: false },
+              { name: "Services", id: "services", anker: true },
+              { name: "Contact", id: "contact", anker: false },
+              { name: "About", id: "about", anker: false },
             ].map((item) => (
               <a
                 key={item.name}
-                href={`#${item.id}`} // This makes it a hash link to an ID on the page
-                className="text-base font-medium text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                href={item.anker === true ? `/#${item.id}` : `/${item.id}`  } // This makes it a hash link to an ID on the page
+                className="text-[18px] font-medium text-white transition-all duration-200 m-[15px] border border-transparent px-[6px]  hover:border-white focus:text-blue-600"
               >
                 {item.name}
               </a>
@@ -82,7 +82,7 @@ const Header = () => {
           {/* Desktop CTA */}
           <a
             href="#"
-            className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700"
+            className="items-center justify-center hidden px-4 py-[3]  text-[18px] font-semibold text-[#060000] transition-all duration-200 bg-[#D9D9D9] border border-transparent rounded-xs lg:inline-flex hover:bg-[#F2F2F2] focus:bg-[#F2F2F2]"
             role="button"
           >
             Get estimate
