@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 import React, { useState } from "react";
 
@@ -12,14 +13,14 @@ const Header = () => {
         {/* Desktop/Nav */}
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">
-            <a href="/" title="Logo" className="flex">
+            <Link href="/" title="Logo" className="flex">
               <Image
                 src="/LogoLight.png"
                 alt="PWN Cleaning Logo"
                 width={60}
                 height={60}
               />
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
