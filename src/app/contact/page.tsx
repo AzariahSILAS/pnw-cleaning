@@ -1,8 +1,16 @@
-function Contact(){
-    return(
-        <div className="max-w-4xl  px-10 py-12 lg:px-0  mx-auto " >
-            <h1>Contact</h1>
-        </div>
-    )
+import Head from 'next/head';
+import EstimateForm from './estimateForm';
+
+export default function EstimatePage() {
+  return (
+    <>
+      <Head>
+        <title>Get an Estimate - PNW Cleaning</title>
+        <meta name="description" content="Request a free cleaning service estimate from PNW Cleaning." />
+      </Head>
+      <main className="py-10 px-4">
+        <EstimateForm />
+      </main>
+    </>
+  );
 }
-export default Contact
