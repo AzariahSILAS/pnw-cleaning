@@ -41,7 +41,7 @@ export default function EstimateForm() {
   };
 
   if (submitted) {
-    return <p className="text-green-600">Thank you! We'll contact you soon.</p>;
+    return <p className="text-green-600">Thank you! We&apos;ll contact you soon.</p>;
   }
 
   return (

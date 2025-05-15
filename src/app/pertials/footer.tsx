@@ -7,11 +7,11 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-3 gap-y-16 gap-x-12">
           {/* Logo and Description */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-            <img
+            <a href="/"><img
               className="w-auto h-9"
               src="LogoLight.png"
               alt="Logo"
-            />
+            /></a>
             <p className="text-base leading-relaxed text-white mt-7">
             Experience the Difference of a Cleaner Workspace
             </p>
