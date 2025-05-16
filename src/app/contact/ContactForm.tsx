@@ -5,7 +5,7 @@ function ContactForm() {
 
   <div>
     <label className="block mb-1 font-medium">Phone Number</label>
-    <p className="w-full border p-2 rounded bg-gray-100">+1 (555) 123-4567</p>
+    <p className="w-full border p-2 rounded bg-gray-100">+1 (509) 508-1503</p>
   </div>
 
   <div>
@@ -16,7 +16,7 @@ function ContactForm() {
   <div>
     <label className="block mb-1 font-medium">Service Areas</label>
     <p className="w-full border p-2 rounded bg-gray-100">
-      Seattle, Bellevue, Tacoma, Renton, Redmond, and surrounding areas in the PNW.
+      Spokane, coeur d'alene and surrounding areas.
     </p>
   </div>
 </div>
