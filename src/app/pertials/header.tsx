@@ -82,7 +82,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <a
-            href="#"
+            href="/contact"
             className="items-center justify-center hidden px-4 py-[3]  text-[18px] font-semibold text-[#060000] transition-all duration-200 bg-[#D9D9D9] border border-transparent rounded-xs lg:inline-flex hover:bg-[#F2F2F2] focus:bg-[#F2F2F2]"
             role="button"
           >
@@ -114,7 +114,7 @@ const Header = () => {
 
             <div className="px-6 mt-6">
               <a
-                href="#"
+                href="/contact"
                 className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md items-center hover:bg-blue-700 focus:bg-blue-700"
                 role="button"
               >

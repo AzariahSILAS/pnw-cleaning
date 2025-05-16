@@ -1,6 +1,6 @@
 const WhyChooseUs = () => {
     return (
-      <div className="w-full mx-auto px-10 lg:px-0 py-12 py-12 ">
+      <div className="w-full mx-auto px-10 lg:px-0 py-12 ">
         <h2 className="text-2xl font-semibold text-center mb-10">
           Why Businesses Choose PNW Cleaning.
         </h2>
