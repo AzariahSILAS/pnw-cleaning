@@ -16,7 +16,7 @@ function ContactForm() {
   <div>
     <label className="block mb-1 font-medium">Service Areas</label>
     <p className="w-full border p-2 rounded bg-gray-100">
-      Spokane, coeur d'alene and surrounding areas.
+      Spokane, coeur d&apos;alene and surrounding areas.
     </p>
   </div>
 </div>
