@@ -41,11 +41,13 @@ export default function EstimateForm() {
   };
 
   if (submitted) {
-    return <p className="text-green-600">Thank you! We&#39;ll contact you soon.</p>;
+    return <div className=" w-full space-y-4 max-w-lg mx-auto mb-[20px] lg:mb-[0px] p-4 border rounded-md shadow-md bg-white">
+      <h2 className="text-green-600 text-2xl font-semibold">Thank you! We&#39;ll contact you soon.</h2>
+    </div>
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto p-4 border rounded-md shadow-md bg-white">
+    <form onSubmit={handleSubmit} className=" w-full space-y-4 max-w-lg mx-auto mb-[20px] lg:mb-[0px] p-4 border rounded-md shadow-md bg-white">
       <h2 className="text-2xl font-semibold">Get an Estimate</h2>
 
       <div>
