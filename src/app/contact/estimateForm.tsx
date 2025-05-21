@@ -22,14 +22,24 @@ export default function EstimateForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value, type, checked } = e.target;
+  e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  const target = e.target;
+  const { name, value, type } = target;
+
+  // Check if it's an input element and a checkbox
+  if (type === 'checkbox' && target instanceof HTMLInputElement) {
     setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: target.checked,
     }));
-  };
+  } else {
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+};
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
