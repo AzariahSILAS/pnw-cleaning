@@ -7,6 +7,7 @@ interface FormData {
   number: string;
   email: string;
   info: string;
+  consent: boolean;
 }
 
 export default function EstimateForm() {
@@ -15,17 +16,30 @@ export default function EstimateForm() {
     number: '',
     email: '',
     info: '',
+    consent: false,
   });
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
   };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    // Optional: Reject if user didn't give consent (if it's required)
+    // if (!formData.consent) {
+    //   alert('Please consent to receive text messages.');
+    //   return;
+    // }
+
     try {
       const res = await fetch('/api/estimate', {
         method: 'POST',
@@ -41,13 +55,20 @@ export default function EstimateForm() {
   };
 
   if (submitted) {
-    return <div className=" w-full space-y-4 max-w-lg mx-auto mb-[20px] lg:mb-[0px] p-4 border rounded-md shadow-md bg-white">
-      <h2 className="text-green-600 text-2xl font-semibold">Thank you! We&#39;ll contact you soon.</h2>
-    </div>
+    return (
+      <div className="w-full space-y-4 max-w-lg mx-auto mb-[20px] lg:mb-[0px] p-4 border rounded-md shadow-md bg-white">
+        <h2 className="text-green-600 text-2xl font-semibold">
+          Thank you! We&#39;ll contact you soon.
+        </h2>
+      </div>
+    );
   }
 
   return (
-    <form onSubmit={handleSubmit} className=" w-full space-y-4 max-w-lg mx-auto mb-[20px] lg:mb-[0px] p-4 border rounded-md shadow-md bg-white">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full space-y-4 max-w-lg mx-auto mb-[20px] lg:mb-[0px] p-4 border rounded-md shadow-md bg-white"
+    >
       <h2 className="text-2xl font-semibold">Get an Estimate</h2>
 
       <div>
@@ -96,6 +117,23 @@ export default function EstimateForm() {
           required
           className="w-full border p-2 rounded"
         />
+      </div>
+
+      <div className="flex items-start space-x-2">
+        <input
+          type="checkbox"
+          id="consent"
+          name="consent"
+          checked={formData.consent}
+          onChange={handleChange}
+          required
+          className="mt-1"
+        />
+        <label htmlFor="consent" className="text-sm">
+          Click this box if you consent to receive text messages from us so we
+          can get in touch with you over SMS. Message & data rates may apply.
+          Reply STOP to opt out.
+        </label>
       </div>
 
       <button

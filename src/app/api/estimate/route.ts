@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { name, number, email, info } = body;
+  const { name, number, email, info, consent } = body;
 
   try {
     const transporter = nodemailer.createTransport({
@@ -26,6 +26,7 @@ export async function POST(req: Request) {
         <p><strong>Phone Number:</strong> ${number}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Details:</strong><br/>${info.replace(/\n/g, '<br />')}</p>
+        <p><strong>SMS Consent:</strong> ${consent ? 'Yes' : 'No'}</p>
       `,
     });
 
