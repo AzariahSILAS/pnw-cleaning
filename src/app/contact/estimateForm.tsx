@@ -136,7 +136,6 @@ export default function EstimateForm() {
           name="consent"
           checked={formData.consent}
           onChange={handleChange}
-          required
           className="mt-1"
         />
         <label htmlFor="consent" className="text-sm">
