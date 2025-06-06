@@ -7,7 +7,7 @@ const ExperienceSection = () => {
             Experience the Difference of a Cleaner Workspace.
           </h2>
           <p className="text-gray-700 ">
-            At PNW Cleaning, we bring home-quality care to your workplace, creating a cleaner, healthier environment where your team can thrive.
+            At Topp Janitorial, we bring home-quality care to your workplace, creating a cleaner, healthier environment where your team can thrive.
           </p>
           </div>
           <hr className="border-gray-700 border-2" />

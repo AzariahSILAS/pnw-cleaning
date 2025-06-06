@@ -2,7 +2,7 @@ const WhyChooseUs = () => {
     return (
       <div className="w-full mx-auto px-10 lg:px-0 py-12 ">
         <h2 className="text-2xl font-semibold text-center mb-10">
-          Why Businesses Choose PNW Cleaning.
+          Why Businesses Choose Topp Janitorial.
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto place-items-center ">
           <div className="flex items-center justify-start w-[255]  gap-4 ">

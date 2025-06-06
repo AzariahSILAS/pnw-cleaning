@@ -5,7 +5,7 @@ function ContactForm() {
 
   <div>
     <label className="block mb-1 font-medium">Phone Number</label>
-    <p className="w-full border p-2 rounded bg-gray-100">+1 (509) 508-1503</p>
+    <p className="w-full border p-2 rounded bg-gray-100">+1 (844) 793-8905</p>
   </div>
 
   <div>

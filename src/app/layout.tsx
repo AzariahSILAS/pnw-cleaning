@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PNW Cleaning",
-  description: "PNW Cleaning's home website",
+  title: "Topp Janitorial",
+  description: "Your go to Janitorial company",
 };
 
 export default function RootLayout({

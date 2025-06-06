@@ -3,7 +3,7 @@ function FourthSection(){
     return (    
     <div className=" bg-[#5E544C]">
         <div className="max-w-4xl  px-10 py-12 lg:px-0  mx-auto ">
-            <h2 className="text-2xl text-center font-semibold pb-10 text-white ">Why Businesses Trust PNW Cleaning</h2>
+            <h2 className="text-2xl text-center font-semibold pb-10 text-white ">Why Businesses Trust Topp Janitorial</h2>
             <div>
                 <p className="font-semibold text-white">Licensed, bonded & insured</p>
                 <p className="pb-5 text-white">We’re fully certified to protect both your property and our team — giving you peace of mind every step of the way.</p>
