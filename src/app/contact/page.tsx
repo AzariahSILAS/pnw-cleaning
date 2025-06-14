@@ -1,8 +1,16 @@
+'use client';
+
+import { useEffect } from 'react';
 import Head from 'next/head';
 import EstimateForm from './estimateForm';
 import ContactForm from './ContactForm';
+import * as fbq from '@/lib/fbpixel'; // Make sure this path matches your file
 
 export default function EstimatePage() {
+  useEffect(() => {
+    fbq.event('EstimatePageVisited'); // custom event name — can be anything
+  }, []);
+
   return (
     <>
       <Head>
