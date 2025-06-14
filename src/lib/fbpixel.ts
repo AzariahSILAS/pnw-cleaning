@@ -22,3 +22,4 @@ export const event = (
     window.fbq('trackCustom', name, options);
   }
 };
+console.log('FB_PIXEL_ID in browser:', FB_PIXEL_ID);
