@@ -1,13 +1,24 @@
+// src/lib/fbpixel.ts
+
 export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '';
 
-export const pageview = () => {
-  if (typeof window !== 'undefined' && typeof (window as any).fbq === 'function') {
-    (window as any).fbq('track', 'PageView');
+declare global {
+  interface Window {
+    fbq: (...args: any[]) => void;
+  }
+}
+
+export const pageview = (): void => {
+  if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+    window.fbq('track', 'PageView');
   }
 };
 
-export const event = (name: string, options: Record<string, any> = {}) => {
-  if (typeof window !== 'undefined' && typeof (window as any).fbq === 'function') {
-    (window as any).fbq('trackCustom', name, options);
+export const event = (
+  name: string,
+  options: Record<string, unknown> = {}
+): void => {
+  if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+    window.fbq('trackCustom', name, options);
   }
 };
