@@ -5,26 +5,32 @@ import { FB_PIXEL_ID } from '@/lib/fbpixel';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      {/* Facebook Pixel Script */}
+      {/* Load Facebook Pixel script from Meta */}
       <Script
-        id="fb-pixel"
+        id="fb-pixel-loader"
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '${FB_PIXEL_ID}');
-            fbq('track', 'PageView');
-          `,
+        src="https://connect.facebook.net/en_US/fbevents.js"
+        onLoad={() => {
+          if (typeof window.fbq === 'undefined') {
+            window.fbq = function () {
+              (window.fbq as any).callMethod
+                ? (window.fbq as any).callMethod.apply(window.fbq, arguments)
+                : (window.fbq as any).queue.push(arguments);
+            };
+            (window.fbq as any).queue = [];
+            (window.fbq as any).loaded = true;
+            (window.fbq as any).version = '2.0';
+            (window.fbq as any).push = window.fbq;
+          }
+
+          window.fbq('init', FB_PIXEL_ID);
+          window.fbq('track', 'PageView');
+
+          console.log('✅ FB Pixel initialized');
         }}
       />
       <Component {...pageProps} />
     </>
   );
 }
+
